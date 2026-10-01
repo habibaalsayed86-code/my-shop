@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html" >About</a></li>
+      <li><a href="#" id="cart-btn">Cart <span id="cart-count"> (0) </span></a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="logo">
+      <a href="#"><img src="logo.avif" alt="logo"></a>
+    </div>
+  </nav>
+
+  <div class="sidebar">
+    <a href="#" data-category="women's clothing">women</a>
+    <a href="#" data-category="men's clothing">men</a>
+    <a href="#" data-category="jewelery">accessories</a>
+  </div>
+
+  <div class="products-container" id="products-container"></div>
+  
+
+  
+
+
+<div class="product-modal" id="product-modal">
+  <div class="modal-content">
+    <span class="close-modal" id="close-modal">&times;</span>
+    <div class="modal-body">
+      
+    </div>
+  </div>
+</div>
+
+
+ <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2> MY Cart</h2>
+      <span class="close-cart" id="close-cart">&times;</span>
+    </div>
+    
+    <div class="cart-body" id="cart-body"></div>
+
+    <div class="cart-footer">
+    <div id="cart-total">
+      <span>Total:</span>
+      <span id="cart-total-price">$0.00</span>
+    </div>
+    <button class="checkout-btn" id="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+<div class="cart-overlay" id="cart-overlay"></div>
+
+
+<div class="checkout-modal" id="checkout-modal">
+  <div class="checkout-content">
+    <span class="close-checkout" id="close-checkout">&times;</span>
+
+    <div id="checkout-form-view">
+      <h2>Checkout</h2>
+      <p class="checkout-total">Order total: <strong id="checkout-total-price">$0.00</strong></p>
+
+      <form id="checkout-form" novalidate>
+        <div class="form-group">
+          <label for="checkout-name">Full name</label>
+          <input type="text" id="checkout-name" name="name" placeholder="John Doe" autocomplete="name">
+          <small class="error-msg" id="error-name"></small>
+        </div>
+        <div class="form-group">
+          <label for="checkout-email">Email</label>
+          <input type="email" id="checkout-email" name="email" placeholder="you@example.com" autocomplete="email">
+          <small class="error-msg" id="error-email"></small>
+        </div>
+        <div class="form-group">
+          <label for="checkout-phone">Phone number</label>
+          <input type="tel" id="checkout-phone" name="phone" placeholder="+20 100 000 0000" autocomplete="tel">
+          <small class="error-msg" id="error-phone"></small>
+        </div>
+        <div class="form-group">
+          <label for="checkout-address">Address</label>
+          <textarea id="checkout-address" name="address" rows="3" placeholder="Street, building, city" autocomplete="street-address"></textarea>
+          <small class="error-msg" id="error-address"></small>
+        </div>
+        <button type="submit" class="confirm-checkout-btn" id="confirm-checkout">Confirm Order</button>
+      </form>
+    </div>
+
+    <div class="checkout-success" id="checkout-success" hidden>
+      <div class="success-icon">&#10003;</div>
+      <h2>Thank you!</h2>
+      <p>Your order has been placed. We'll contact you soon to confirm the delivery.</p>
+      <button type="button" class="confirm-checkout-btn" id="success-close">Continue shopping</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
